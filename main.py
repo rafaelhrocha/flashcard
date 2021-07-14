@@ -7,14 +7,15 @@ def config():
     ui.label_gif.setMovie(ui.movie)
     ui.movie.start()
 
-    ui.movie = QMovie("./loading.gif")
-    ui.label_load.setMovie(ui.movie)
-    ui.movie.start()
+    # ui.movie = QMovie("./loading.gif")
+    # ui.label_load.setMovie(ui.movie)
+    # ui.movie.start()
 
-    ui.label_confirm.setVisible(False)
-    ui.button_no.setVisible(False)
-    ui.button_yes.setVisible(False)
-    ui.button_download.setVisible(False)
+    ui.label_infos.setVisible(False)
+    # ui.label_gif.setVisible(False)
+    # ui.button_cancel.setVisible(False)
+    # ui.button_confirm.setVisible(False)
+    ui.button_start.setVisible(False)
 
 
 if __name__ == "__main__":
