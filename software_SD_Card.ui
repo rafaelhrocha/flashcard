@@ -269,7 +269,7 @@ border-color:transparent;
           </widget>
          </item>
          <item row="0" column="3">
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="button_cancel">
            <property name="minimumSize">
             <size>
              <width>166</width>
@@ -370,6 +370,23 @@ border-color:transparent;
              <height>200</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <family>Segoe UI Semibold</family>
+             <pointsize>18</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="acceptDrops">
+            <bool>false</bool>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>true</bool>
+           </property>
            <property name="styleSheet">
             <string notr="true">background-color:#FFFFFF;
 border:1px solid;
@@ -379,6 +396,15 @@ border-color:#000000;
            </property>
            <property name="text">
             <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="indent">
+            <number>0</number>
            </property>
           </widget>
          </item>

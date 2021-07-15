@@ -124,23 +124,23 @@ class Ui_MainWindow(object):
 "")
         self.button_confirm.setObjectName("button_confirm")
         self.container_buttons.addWidget(self.button_confirm, 0, 2, 1, 1)
-        self.pushButton_2 = QtWidgets.QPushButton(self.gridLayoutWidget_4)
-        self.pushButton_2.setMinimumSize(QtCore.QSize(166, 80))
-        self.pushButton_2.setMaximumSize(QtCore.QSize(166, 80))
+        self.button_cancel = QtWidgets.QPushButton(self.gridLayoutWidget_4)
+        self.button_cancel.setMinimumSize(QtCore.QSize(166, 80))
+        self.button_cancel.setMaximumSize(QtCore.QSize(166, 80))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("background-color:#bf7777;\n"
+        self.button_cancel.setFont(font)
+        self.button_cancel.setStyleSheet("background-color:#bf7777;\n"
 "color:#FFFFFF;\n"
 "border:2px solid;\n"
 "border-radius:16px;\n"
 "border-color:transparent;\n"
 "")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.container_buttons.addWidget(self.pushButton_2, 0, 3, 1, 1)
+        self.button_cancel.setObjectName("button_cancel")
+        self.container_buttons.addWidget(self.button_cancel, 0, 3, 1, 1)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.container_buttons.addItem(spacerItem1, 0, 4, 1, 1)
         self.gridLayoutWidget_5 = QtWidgets.QWidget(self.widget)
@@ -165,12 +165,24 @@ class Ui_MainWindow(object):
         self.label_infos.setSizePolicy(sizePolicy)
         self.label_infos.setMinimumSize(QtCore.QSize(500, 200))
         self.label_infos.setMaximumSize(QtCore.QSize(500, 200))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Semibold")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_infos.setFont(font)
+        self.label_infos.setAcceptDrops(False)
+        self.label_infos.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_infos.setAutoFillBackground(True)
         self.label_infos.setStyleSheet("background-color:#FFFFFF;\n"
 "border:1px solid;\n"
 "border-radius:16px;\n"
 "border-color:#000000;\n"
 "")
         self.label_infos.setText("")
+        self.label_infos.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_infos.setWordWrap(True)
+        self.label_infos.setIndent(0)
         self.label_infos.setObjectName("label_infos")
         self.gridLayout.addWidget(self.label_infos, 0, 1, 1, 1)
         self.container_body.addWidget(self.widget, 0, 0, 1, 1)
@@ -184,7 +196,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_instruction.setText(_translate("MainWindow", "INSIRA O CARTÃO E PRESSIONE O BOTÃO  PARA INICIAR O DOWNLOAD"))
         self.button_confirm.setText(_translate("MainWindow", "CONFIRM"))
-        self.pushButton_2.setText(_translate("MainWindow", "CANCEL"))
+        self.button_cancel.setText(_translate("MainWindow", "CANCEL"))
 
 
 if __name__ == "__main__":
