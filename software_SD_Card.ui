@@ -10,6 +10,18 @@
     <height>772</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1361</width>
+    <height>772</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1361</width>
+    <height>772</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -64,7 +76,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>JabilLogo.png</pixmap>
+         <pixmap>C:/Users/2334487/.designer/backup/JabilLogo.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -197,20 +209,38 @@ border-color:transparent;
              <bold>true</bold>
             </font>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">background-color:rgb(0,123,255);
+            <string notr="true">QPushButton
+{
+background-color:rgb(0,123,255);
 color:#FFFFFF;
 border:2px solid;
 border-radius:16px;
 border-color:transparent;
-</string>
+}
+QPushButton::hover
+{
+background-color :rgb(0, 170, 255);
+border-color:rgb(0,123,255);
+font-size:21pt;
+}
+QPushButton::pressed
+{
+border: 4px solid;
+border-color :transparent;
+font-size:20pt;
+}
+r</string>
            </property>
            <property name="text">
             <string notr="true">DOWNLOAD</string>
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>download-file.png</normaloff>download-file.png</iconset>
+             <normaloff>C:/Users/2334487/.designer/backup/download-file.png</normaloff>C:/Users/2334487/.designer/backup/download-file.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -255,16 +285,34 @@ border-color:transparent;
              <bold>true</bold>
             </font>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">background-color:#77bf9f;
+            <string notr="true">QPushButton
+{
+background-color:#06BD3A;
 color:#FFFFFF;
 border:2px solid;
 border-radius:16px;
 border-color:transparent;
+}
+QPushButton::hover
+{
+background-color :#2AEB60;
+border-color:#06BD3A;
+font-size:17pt;
+}
+QPushButton::pressed
+{
+border: 4px solid;
+border-color :transparent;
+font-size:16pt;
+}
 </string>
            </property>
            <property name="text">
-            <string>CONFIRM</string>
+            <string notr="true">CONFIRM</string>
            </property>
           </widget>
          </item>
@@ -290,16 +338,33 @@ border-color:transparent;
              <bold>true</bold>
             </font>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">background-color:#bf7777;
+            <string notr="true">QPushButton
+{
+background-color:#E03A48;
 color:#FFFFFF;
 border:2px solid;
 border-radius:16px;
 border-color:transparent;
-</string>
+}
+QPushButton::hover
+{
+background-color :#ff737e;
+border-color:#E03A48;
+font-size:17pt;
+}
+QPushButton::pressed
+{
+border: 4px solid;
+border-color :transparent;
+font-size:16pt;
+}</string>
            </property>
            <property name="text">
-            <string>CANCEL</string>
+            <string notr="true">CANCEL</string>
            </property>
           </widget>
          </item>
@@ -328,28 +393,6 @@ border-color:transparent;
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_gif">
-           <property name="maximumSize">
-            <size>
-             <width>361</width>
-             <height>371</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="pixmap">
-            <pixmap>instruction_sd.gif</pixmap>
-           </property>
-           <property name="scaledContents">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="1">
           <widget class="QLabel" name="label_infos">
            <property name="sizePolicy">
@@ -385,7 +428,7 @@ border-color:transparent;
             <enum>Qt::LeftToRight</enum>
            </property>
            <property name="autoFillBackground">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color:#FFFFFF;
@@ -405,6 +448,67 @@ border-color:#000000;
            </property>
            <property name="indent">
             <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_gif">
+           <property name="maximumSize">
+            <size>
+             <width>361</width>
+             <height>371</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>C:/Users/2334487/.designer/backup/instruction_sd.gif</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QComboBox" name="comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>300</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Segoe UI Semibold</family>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border:1px solid;
+border-color:#000000;
+border-radius:6px;
+background-color:#FFFFFF;</string>
+           </property>
+           <property name="maxCount">
+            <number>2147483647</number>
+           </property>
+           <property name="insertPolicy">
+            <enum>QComboBox::InsertAtBottom</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QComboBox::AdjustToContents</enum>
            </property>
           </widget>
          </item>
