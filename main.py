@@ -12,14 +12,14 @@
 
 # imports
 from software_SD_Card import *
-from PyQt5.QtGui import QMovie # install: pip install pyqt5
-import os
-import requests # install: pip install requests
+from PyQt5.QtGui import QMovie # install: sudo apt install python-pyqt5
+import requests # install: sudo apt install python-requests
 import json
 import threading
 import shutil
 import sys
 import time
+import os
 
 #variables
 global host_file, apu_url, flash_command, load_gif, inst_gif, file_raspberry, file_raspad
@@ -28,14 +28,14 @@ inst_gif = "./alternativa_gif.gif"
 load_gif = "./loading.gif"
 host_file  = "/media/pi/boot/hostname" # raspberry name
 api_url = "http://brbelm0apps02.corp.jabil.org/AIOService/Estation/GetEquipmentByHostname/" 
-flash_command = "sudo flash -f -d /dev/sdb /home/pi/Desktop/Img_rasp/b28686c2-213e-11ea-b32c-0242ac110002.img"
-file_raspberry = "/home/pi/Desktop/Img_rasp/modeloAIO/boot/"
-file_raspad = "/home/pi/Desktop/Img_rasp/modeloRaspad/boot/"
+flash_command = "sudo flash -f -d /dev/sdb ./b28686c2-213e-11ea-b32c-0242ac110002.img"
+file_raspberry = "./modeloAIO/boot/"
+file_raspad = "./modeloRaspad/boot/"
 sd_file = "/media/pi/boot/"
 
 #list the images options
 def config():
-    ui.comboBox.addItems(["POSTO DE RASPBERRY","POSTO DE RASPAD"])
+    ui.comboBox.addItems(["POSTO DE ALL IN ONE","POSTO DE RASPAD"])
 
 # connect all the buttons
 def buttons():
@@ -99,7 +99,7 @@ def confirm():
             try:
                 #check image select
                 image_select = ui.comboBox.currentText()
-                if image_select == "POSTO DE RASPBERRY":
+                if image_select == "POSTO DE ALL IN ONE":
                     copy_files(file_raspberry)
                 elif image_select == "POSTO DE RASPAD":
                     copy_files(file_raspad)
