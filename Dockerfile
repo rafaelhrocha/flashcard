@@ -13,8 +13,7 @@ COPY /. /sd/
 WORKDIR /sd
 
 # run flash commands
-RUN apt-get install -y pv curl unzip hdparm \
-    curl -LO https://github.com/hypriot/flash/releases/download/2.7.2/flash \
+RUN curl -LO https://github.com/hypriot/flash/releases/download/2.7.2/flash \
     chmod +x flash \
     mv flash /usr/local/bin/flash 
 
