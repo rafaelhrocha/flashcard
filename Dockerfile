@@ -13,9 +13,9 @@ COPY /. /sd/
 WORKDIR /sd
 
 # run flash commands
-RUN curl -LO https://github.com/hypriot/flash/releases/download/2.7.2/flash \
-    chmod +x flash \
-    mv flash /usr/local/bin/flash 
+RUN sudo curl -LO https://github.com/hypriot/flash/releases/download/2.7.2/flash \
+    sudo chmod +x flash \
+    sudo mv flash /usr/local/bin/flash 
 
 RUN chmod +x /sd/startup.sh
 ENV START_UP="/sd/startup.sh"
