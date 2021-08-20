@@ -1,4 +1,4 @@
-#FROM docker.corp.jabil.org/raspberry-pi/xwindow
+FROM docker.corp.jabil.org/raspberry-pi/xwindow
 
 # install dependences
 RUN apt-get update && apt-get install -y python3-dev \

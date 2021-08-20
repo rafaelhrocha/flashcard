@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo python /sd/main.py
+sudo python3 /sd/main.py
