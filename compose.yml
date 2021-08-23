@@ -1,0 +1,13 @@
+version: '2'
+services:
+  sd:
+    image: docker.corp.jabil.org/automation-bel/sd_download:latest
+    volumes:
+      - /run/dbus:/host/run/dbus
+      - /proc/sysrq-trigger:/sd/sysrq
+      - /storage/pi/:/storage/pi/:z
+    ports:
+      - "8080:5900"
+    privileged: true
+    tty: true
+    dns_search: corp.jabil.org
