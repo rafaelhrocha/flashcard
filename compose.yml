@@ -9,5 +9,5 @@ services:
     ports:
       - "8080:5900"
     privileged: true
-    tty: trues
+    tty: true
     dns_search: corp.jabil.org
