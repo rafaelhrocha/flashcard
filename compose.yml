@@ -1,6 +1,6 @@
 version: '2'
 services:
-  sd:
+  SD-FLASHCARD:
     image: docker.corp.jabil.org/automation-bel/flashcard:latest
     volumes:
       - /run/dbus:/host/run/dbus
@@ -9,5 +9,5 @@ services:
     ports:
       - "8080:5900"
     privileged: true
-    tty: true
+    tty: trues
     dns_search: corp.jabil.org
