@@ -1,7 +1,7 @@
 version: '2'
 services:
   sd:
-    image: docker.corp.jabil.org/automation-bel/sd_download:latest
+    image: docker.corp.jabil.org/automation-bel/flashcard:latest
     volumes:
       - /run/dbus:/host/run/dbus
       - /proc/sysrq-trigger:/sd/sysrq
