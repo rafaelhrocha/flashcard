@@ -24,8 +24,8 @@ import os
 #variables
 global host_file, apu_url, flash_command, load_gif, inst_gif, file_raspberry, file_raspad
 
-inst_gif = "./alternativa_gif.gif"
-load_gif = "./loading.gif"
+inst_gif = "./images/instruction_gif.gif"
+load_gif = "./images/loading.gif"
 host_file  = "/media/pi/boot/hostname" # raspberry name
 api_url = "http://brbelm0apps02.corp.jabil.org/AIOService/Estation/GetEquipmentByHostname/" 
 flash_command = "sudo flash -f -d /dev/sdb ./b28686c2-213e-11ea-b32c-0242ac110002.img"
@@ -66,7 +66,7 @@ def start():
         ui.button_cancel.setVisible(True)
         ui.button_confirm.setVisible(False)        
         
-        if str(e.message) == "No JSON object could be decoded":
+        if str(e) == "No JSON object could be decoded":
             ui.label_instruction.setText("ERRO DE REDE ENCONTRADO")
             ui.label_infos.setText("AGUARDE E TENTE NOVAMENTE\n\nSE  O PROBLEMA PERSISTIR ENTRE EM CONTATO COM O TIME DE SUPORTE DO ALL IN ONE")
             
@@ -107,7 +107,7 @@ def confirm():
                 card_dir = os.path.exists(host_file )  
                 ui.comboBox.setVisible(False)
                 ui.label_gif.setVisible(True)
-                ui.label_gif.setPixmap(QtGui.QPixmap("./download_complete.png"))
+                ui.label_gif.setPixmap(QtGui.QPixmap("./images/download_complete.png"))
                 ui.label_instruction.setText("PROCESSO DE GRAVACAO CONCLUIDO\nREMOVA O CARTAO SD PARA ENCERRAR")
                 ui.button_confirm.setText("FINALIZAR")
                 
