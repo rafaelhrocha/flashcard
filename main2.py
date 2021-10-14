@@ -27,14 +27,25 @@ class Card(Ui_MainWindow):
         self.intruction_gif = "./images/instruction_gif.gif"
         self.load_gif = "./images/loading.gif"
         self.hostfile = "./images/media/pi/boot/hostname"
-        self.api_url = ''
-        self.flash_command = ''
-        self.file_aio = ''
-        self.file_raspad = ''
-        self.sd_file = ''
+        self.api_url = "http://brbelm0apps02.corp.jabil.org/AIOService/Estation/GetEquipmentByHostname/"
+        self.flash_command = "sudo flash -f -d /dev/sdb ./b28686c2-213e-11ea-b32c-0242ac110002.img"
+        self.file_aio = "./modeloAIO/boot/"
+        self.file_raspad = "./modeloRaspad/boot/"
+        self.sd_file = "/media/pi/boot/"
+        ui.comboBox.addItems(["POSTO DE ALL IN ONE","POSTO DE RASPAD"])
 
     def set_initial_window(self):
-        pass
+        ui.label_infos.setVisible(False)
+        ui.button_cancel.setVisible(False)
+        ui.button_confirm.setVisible(False)
+        ui.button_start.setVisible(True)
+        ui.label_gif.setVisible(True)
+        ui.comboBox.setVisible(False)
+        ui.label_instruction.setText("INSIRA O CARTAO E PRESSIONE O BOTAO PARA INICIAR O DOWNLOAD")
+        ui.button_confirm.setText("CONFIRM")
+        ui.comboBox.addItems(["POSTO DE ALL IN ONE","POSTO DE RASPAD"])
 
-
-    
+    def clicked_buttons(self):
+        ui.button_start.clicked.connect(start)
+        ui.button_cancel.clicked.connect(self.set_initial_window)
+        ui.button_confirm.clicked.connect(confirm)

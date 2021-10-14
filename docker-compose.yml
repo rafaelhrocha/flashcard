@@ -1,12 +1,11 @@
-version: '2'
+version: '3'
 services:
   SD-FLASHCARD:
+    container_name: SD Flash Card
     image: docker.corp.jabil.org/automation-bel/flashcard:latest
-    volumes:
-      - /run/dbus:/host/run/dbus
-      - /proc/sysrq-trigger:/sd/sysrq
-      - /storage/pi/:/storage/pi/:z
-      - /media/pi/boot/:/media/pi/boot/
+    volumes: 
+      - /media/pi/boot/:/sd/media/pi/boot/
+      - /dev/sdb:/sd/dev/sdb
 
     privileged: true
     tty: true

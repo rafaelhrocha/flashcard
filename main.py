@@ -137,7 +137,7 @@ def start_download():
     run.start()
 
 def flash_image():
-    download_variable = os.system(flash_command)
+    os.system(flash_command)
     finish_download()
     
 def finish_download():
@@ -161,6 +161,7 @@ def api_estation(hostname):
 
 # check if sd card is connect
 def if_sd_connect():
+    print("")
     hostname_file  = open(host_file,"r")
     hostname = hostname_file.read(12)
     hostname_file.close()
