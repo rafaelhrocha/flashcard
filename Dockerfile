@@ -4,8 +4,8 @@ FROM docker.corp.jabil.org/raspberry-pi/xwindow
 RUN apt-get update && apt-get install -y python3-dev \
         python3-requests \
         python3-pip \
-        python3-pyqt5 \
-        apt install curl
+        python3-pyqt5 
+RUN sudo apt install curl
 
 # copy script files
 COPY /. /sd/
