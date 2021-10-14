@@ -26,12 +26,12 @@ global host_file, apu_url, flash_command, load_gif, inst_gif, file_raspberry, fi
 
 inst_gif = "./images/instruction_gif.gif"
 load_gif = "./images/loading.gif"
-host_file  = "/media/pi/boot/hostname" # raspberry name
+host_file  = "./media/pi/boot/hostname" # raspberry name
 api_url = "http://brbelm0apps02.corp.jabil.org/AIOService/Estation/GetEquipmentByHostname/" 
-flash_command = "sudo flash -f -d /dev/sdb ./b28686c2-213e-11ea-b32c-0242ac110002.img"
+flash_command = "sudo flash -f -d ./dev/sdb ./b28686c2-213e-11ea-b32c-0242ac110002.img"
 file_raspberry = "./modeloAIO/boot/"
 file_raspad = "./modeloRaspad/boot/"
-sd_file = "/media/pi/boot/"
+sd_file = "./media/pi/boot/"
 
 #list the images options
 def config():
