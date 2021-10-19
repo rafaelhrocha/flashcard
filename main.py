@@ -47,7 +47,8 @@ def start():
     ui.button_start.setVisible(False)
     ui.label_gif.setVisible(False)
     ui.label_infos.setVisible(True)
-    
+    print("START")
+
     try: 
         hostname = if_sd_connect()
         station = api_estation(hostname)
@@ -62,6 +63,7 @@ def start():
         
  
     except Exception as e : 
+        print("EXCEPTION")
         ui.label_instruction.setVisible(True)
         ui.button_cancel.setVisible(True)
         ui.button_confirm.setVisible(False)        
@@ -161,10 +163,12 @@ def api_estation(hostname):
 
 # check if sd card is connect
 def if_sd_connect():
-    print("")
+    print("TESTE DE HOSTNAME")
     hostname_file  = open(host_file,"r")
+    print("HOSTNAME FILE = " + hostname_file)
     hostname = hostname_file.read(12)
     hostname_file.close()
+    print("HOSTNAME = " + hostname)
     return hostname
 
 # starts gif run

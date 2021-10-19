@@ -1,7 +1,7 @@
 version: '3'
 services:
   SD-FLASHCARD:
-    container_name: SD Flash Card
+    container_name: flashcard
     image: docker.corp.jabil.org/automation-bel/flashcard:latest
     volumes: 
       - /storage/pi/:storage/pi/
