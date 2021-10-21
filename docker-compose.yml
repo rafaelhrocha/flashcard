@@ -4,12 +4,12 @@ services:
     container_name: flashcard
     image: docker.corp.jabil.org/automation-bel/flashcard:latest
     volumes: 
+      - /storage/pi/:/storage/pi/:z
       - /run/dbus:/host/run/dbus
       - /proc/sysrq-trigger:/aio/sysrq
-      - /storage/pi/:/storage/pi/:z
-      
-      - /media/pi/boot/:/sd/media/pi/boot/
-      - /dev/sdb:/sd/dev/sdb
+
+      - /media/pi/boot/:/media/pi/boot/
+      - /dev/sdb:/dev/sdb
     ports:
       - "8080:5900"
     privileged: true
