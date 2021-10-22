@@ -7,8 +7,8 @@ services:
       - /storage/pi/:/storage/pi/:z
       - /run/dbus:/host/run/dbus
       - /proc/sysrq-trigger:/aio/sysrq
-
       - /media/pi/boot/:/media/pi/boot/
+    devices: 
       - /dev/sdb:/dev/sdb
     ports:
       - "8080:5900"
